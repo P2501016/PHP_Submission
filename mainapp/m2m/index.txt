@@ -1,0 +1,14 @@
+<?php
+
+use Slim\App;
+use Slim\Factory\AppFactory;
+
+require __DIR__ . '/vendor/autoload.php';
+
+$app = new App();
+
+$app->get('/sendmessage', function ($request, $response, $args) {
+    require 'sendmessage.php';
+});
+
+$app->run();
