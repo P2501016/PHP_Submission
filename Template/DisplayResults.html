@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><!DOCTYPE html>
+      <html>
+      <head>
+      <title>Display Results</title>
+  <style>
+ /* Table + padding  */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: left;
+    }
+ /* bg colour*/
+    th {
+      background-color: lightgray;
+    }
+
+  </style>
+</head>
+<body>
+<!-- Display results in h1 and th td linked with the values -->
+<h1>Display Results</h1>
+<table>
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>Source SIM</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Switches State</th>
+    <th>Fan Direction</th>
+    <th>Heater Temperature</th>
+    <th>Keypad Value</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>{{ result.id }}</td>
+    <td>{{ result.sim }}</td>
+    <td>{{ result.name }}</td>
+    <td>{{ result.email }}</td>
+    <td>{{ result.switches }}</td>
+    <td>{{ result.fan }}</td>
+    <td>{{ result.temperature }}</td>
+    <td>{{ result.numpad }}</td>
+  </tr>
+  </tbody>
+</table>
+</body>
+</html>

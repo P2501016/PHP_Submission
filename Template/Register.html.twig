@@ -1,0 +1,78 @@
+<html>
+<style>
+  <!--   -->
+  #page-content-div {
+    width: 50%;
+    margin: 0 auto;
+    padding: 30px;
+    text-align: center;
+  }
+
+  /* Form
+  Display flex
+  and aligned to the centre*/
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* label for text input and input for email and password */
+  form label, form input[type="text"], form input[type="email"], form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    text-align: left;
+  }
+  /*Input for Submit and padding*/
+  form input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: green;
+    color: white;
+    font-size: 17px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+  }
+  /*This gives an error and coloured red */
+  .error {
+    color: red;
+    font-size: 15px;
+    margin-bottom: 11px;
+  }
+
+  /*Jumbotron used for the padding on the registration page   */
+</style>
+<div class="jumbotron"></div>
+<div id="page-content-div">
+  <h3>Registration Page</h3>
+  <form action="{{ action1 }}" method="post">
+    <fieldset>
+      <legend>User details</legend>
+      <p class="error"></p>
+      <br>
+      <br>
+
+      <!-- Labels and inputs created for email, password, and confirm password and the register button. -->
+      <form method="post" action="('register')">
+        <label for="username">Enter your username:</label><br>
+        <input type="text" id="username" name="username" value=" "><br>
+        <label for="email">Enter your email:</label><br>
+        <input type="email" id="email" name="email" value=" "><br>
+        <label for="password">Enter your password:</label><br>
+        <input type="password" id="password" name="password" value=" "><br>
+        <label for="confirm_password">Confirm your password:</label><br>
+        <input type="password" id="confirm_password" name="confirm_password" value=" "><br><br>
+        <input type="submit" value="Register">
+      </form>
+    </fieldset>
+  </form>
+
+</div>
+</html>

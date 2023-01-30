@@ -1,0 +1,103 @@
+<style>
+
+  .page_content {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  /* Fieldset */
+  fieldset {
+    border: 1px solid #ccc5c5;
+    padding: 22px;
+    text-align: left;
+    margin: 0 auto;
+    width: 85%;
+  }
+
+  /* legend */
+
+  legend {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  /* Label */
+
+  label {
+    font-size: 15px;
+    font-weight: bold;
+  }
+  /*Padding for username, password, msisdn and message */
+
+  #username,
+  #password,
+  #msisdn,
+  #message {
+    width: 100%;
+    padding: 13px 19px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #beb7b7;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  /* Input for submit and its padding */
+  input[type="submit"] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 17px;
+  }
+  /* Submit hover - bg colour */
+  input[type="submit"]:hover {
+    background-color: #3f9142;
+  }
+  /* Error padding */
+  .error {
+    color: #f60202;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 11px;
+  }
+
+
+</style>
+<!--page content -->
+
+<div class="page_content" id="page-content-div">
+  <h3>Send Message</h3>
+  <form action="{{ action_send }}" method="post">
+    <fieldset>
+      <legend>Send Message</legend>
+      <!-- error -->
+      <p class="error"></p>
+
+      <label for="username">Username:</label><br>
+      <input id="username" name="username" type="text" value=" " size="30" maxlength="50">
+      <br><br>
+      <!--password -->
+      <label for="password">Password:</label><br>
+      <input id="password" name="password" type="password" size="30" maxlength="50">
+      <br><br>
+      <!--Device msisdn -->
+      <label for="msisdn">Device MSISDN:</label><br>
+      <input id="msisdn" name="msisdn" type="text" value=" " size="30" maxlength="50">
+      <br><br>
+      <!--Message -->
+      <label for="message">Message:</label><br>
+      <textarea id="message" name="message" rows="5" cols="50" maxlength="65"></textarea><br>
+      <div id="help">Maximum 65 characters</div>
+      <br><br>
+      <!--submit -->
+      <input type="submit" value="Send">
+    </fieldset>
+
+  </form>
+
+</div>

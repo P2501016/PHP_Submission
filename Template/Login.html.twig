@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+</head>
+<body>
+
+
+<!-- style   -->
+<style>
+  #page-content-div {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    margin-top: 50px;
+  }
+
+  /*Form  */
+  form {
+    width: 300px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    padding: 20px;
+
+    border: 1px solid #c1bcbc;
+
+    border-radius: 6px;
+  }
+
+  /* Input text for password including padding*/
+
+  input[type="text"], input[type="password"] {
+    width: 100%;
+
+    padding: 5px;
+
+    margin-bottom: 22px;
+
+    border: 1px solid gray;
+
+    border-radius: 6px;
+  }
+
+  /* Submit including padding */
+
+  input[type="submit"] {
+    width: 100%;
+
+    padding: 11px;
+
+    background-color: #4CAF50;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+  }
+
+  /* hover for submit */
+
+  input[type="submit"]:hover {
+    background-color: #3c9340;
+  }
+
+  /* Error */
+
+  .error {
+    color: red;
+
+    margin-bottom: 22px;
+  }
+
+
+</style>
+
+
+<!-- Login   -->
+<div id="page-content-div">
+  <h3>Login</h3>
+  <p class="error"></p>
+
+  <!-- Action for log in page -
+    Inputing username and password and submitting -->
+  <form action="{{ action_url }}" method="post">
+
+    <input type="text" name="username" placeholder="Username" required><br>
+
+    <input type="password" name="password" placeholder="Password" required><br>
+
+    <input type="submit" value="Login">
+  </form>
+</div>
+</body>
+</html>
